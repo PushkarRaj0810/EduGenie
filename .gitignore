@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+storage/
+pdfs/
+frontend/node_modules/
+frontend/dist/
+streamlit_app.py
