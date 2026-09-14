@@ -36,7 +36,7 @@ EduGenie is an AI-powered personalized learning platform that helps students lea
 
 
 
-\*\*Frontend\*\*
+\### 🎨 Frontend
 
 \- React
 
@@ -48,7 +48,7 @@ EduGenie is an AI-powered personalized learning platform that helps students lea
 
 
 
-\*\*Backend\*\*
+\### ⚙️ Backend
 
 \- Python
 
@@ -58,7 +58,7 @@ EduGenie is an AI-powered personalized learning platform that helps students lea
 
 
 
-\*\*AI / ML\*\*
+\### 🤖 AI / ML
 
 \- Google Gemini API
 
@@ -70,7 +70,7 @@ EduGenie is an AI-powered personalized learning platform that helps students lea
 
 
 
-\*\*Database\*\*
+\### 🗄️ Database
 
 \- PostgreSQL
 
@@ -78,7 +78,7 @@ EduGenie is an AI-powered personalized learning platform that helps students lea
 
 
 
-\*\*PDF Processing\*\*
+\### 📄 PDF Processing
 
 \- PyMuPDF
 
@@ -124,7 +124,15 @@ Google Gemini
 
 AI Answer
 
-📂 Project Structure
+```
+
+
+
+\## 📂 Project Structure
+
+
+
+```text
 
 EduGenie/
 
@@ -184,28 +192,49 @@ EduGenie/
 
 └── README.md
 
-💻 Requirements
-
-Python 3.11+
-
-Node.js \& npm
-
-PostgreSQL
-
-Git
-
-Google Gemini API Key
+```
 
 
-⚙️ Installation
+
+\## 💻 Requirements
 
 
-1\. Clone the Repository
+
+\- Python 3.11+
+
+\- Node.js \& npm
+
+\- PostgreSQL
+
+\- Git
+
+\- Google Gemini API Key
+
+
+
+\## ⚙️ Installation
+
+
+
+\### 1. Clone the Repository
+
+
+
+```bash
+
 git clone https://github.com/PushkarRaj0810/EduGenie.git
 
 cd EduGenie
 
-2. Backend Setup
+```
+
+
+
+\### 2. Backend Setup
+
+
+
+```powershell
 
 python -m venv .venv
 
@@ -213,19 +242,33 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-3. Frontend Setup
+```
+
+
+
+\### 3. Frontend Setup
+
+
+
+```powershell
 
 cd frontend
 
 npm install
 
-🔑 Environment Variables
+```
 
 
 
-Create a .env file in the project root:
+\## 🔑 Environment Variables
 
 
+
+Create a `.env` file in the project root:
+
+
+
+```env
 
 GEMINI\_API\_KEY=your\_gemini\_api\_key
 
@@ -241,7 +284,15 @@ DB\_USER=postgres
 
 DB\_PASSWORD=your\_postgresql\_password
 
-🗄️ Database Setup
+```
+
+
+
+⚠️ \*\*Never upload `.env` to GitHub.\*\*
+
+
+
+\## 🗄️ Database Setup
 
 
 
@@ -249,18 +300,27 @@ Create a PostgreSQL database:
 
 
 
+```sql
+
 CREATE DATABASE edugenie;
+
+```
+
+
+
 Make sure PostgreSQL is running before starting the application.
 
-▶️ Running the Project
+
+
+\## ▶️ Running the Project
 
 
 
-EduGenie requires two terminals.
+EduGenie requires \*\*two terminals\*\*.
 
 
 
-Terminal 1 – Backend
+\### Terminal 1 – Backend
 
 
 
@@ -268,9 +328,13 @@ From the project root:
 
 
 
+```powershell
+
 .venv\\Scripts\\Activate.ps1
 
 python api\_server.py
+
+```
 
 
 
@@ -278,13 +342,25 @@ Backend:
 
 
 
+```text
+
 http://127.0.0.1:5000
 
-Terminal 2 – Frontend
+```
+
+
+
+\### Terminal 2 – Frontend
+
+
+
+```powershell
 
 cd frontend
 
 npm run dev
+
+```
 
 
 
@@ -292,84 +368,119 @@ Frontend:
 
 
 
+```text
+
 http://localhost:5173
+
+```
 
 
 
 Open the frontend URL in your browser.
 
-📚 Main Modules
 
-Module	Description
 
-Dashboard	Personalized learning overview
+\## 📚 Main Modules
 
-Documents	Upload and manage PDFs
 
-AI Tutor	Ask questions about documents
 
-Quiz	        Generate and attempt AI quizzes
+| Module | Description |
 
-Flashcards	Generate revision flashcards
+|---|---|
 
-Analytics	Track scores and topic performance
+| Dashboard | Personalized learning overview |
 
-Settings	Manage preferences and password
+| Documents | Upload and manage PDFs |
 
-📊 Analytics
+| AI Tutor | Ask questions about documents |
+
+| Quiz | Generate and attempt AI quizzes |
+
+| Flashcards | Generate revision flashcards |
+
+| Analytics | Track scores and topic performance |
+
+| Settings | Manage preferences and password |
+
+
+
+\## 📊 Analytics
 
 
 
 EduGenie tracks:
 
-Quiz attempts
-
-Average score
-
-Best score
-
-Correct answers
-
-Topic-wise performance
-
-Weak topics
-
-Recent activity
 
 
-🔐 Security
+\- Quiz attempts
+
+\- Average score
+
+\- Best score
+
+\- Correct answers
+
+\- Topic-wise performance
+
+\- Weak topics
+
+\- Recent activity
 
 
-Passwords are stored as hashes.
 
-User documents are associated with individual users.
-
-Document ownership is verified by the backend.
-
-API keys and database credentials are stored in environment variables.
-
-Sensitive files are excluded using .gitignore.
+\## 🔐 Security
 
 
-🚧 Future Improvements
+
+\- Passwords are stored as hashes.
+
+\- User documents are associated with individual users.
+
+\- Document ownership is verified by the backend.
+
+\- API keys and database credentials are stored in environment variables.
+
+\- Sensitive files are excluded using `.gitignore`.
 
 
-🌐 Full cloud deployment
 
-☁️ Cloud document storage
-
-🧠 Advanced AI personalization
-
-📈 Advanced learning analytics
-
-🎯 Adaptive quiz difficulty
-
-📄 Support for more document formats
-
-🎤 Voice-based AI Tutor
+\## 🚧 Future Improvements
 
 
-👨‍💻 Author
 
-Pushkar Raj
+\- 🌐 Full cloud deployment
+
+\- ☁️ Cloud document storage
+
+\- 🧠 Advanced AI personalization
+
+\- 📈 Advanced learning analytics
+
+\- 🎯 Adaptive quiz difficulty
+
+\- 📄 Support for more document formats
+
+\- 🎤 Voice-based AI Tutor
+
+
+
+\## 👨‍💻 Author
+
+
+
+\*\*Pushkar Raj\*\*
+
+
+
+GitHub:  
+
+https://github.com/PushkarRaj0810
+
+
+
+\## ⭐ EduGenie
+
+
+
+\*\*Learn from your documents. Ask questions. Practice with AI. Improve your learning.\*\*
 
