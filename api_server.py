@@ -29,7 +29,7 @@ import bcrypt
 
 from utils.pdf_reader import extract_text
 from utils.text_chunker import create_chunks
-from utils.embeddings import create_embeddings
+from utils.embeddings import create_embeddings, create_query_embedding
 from utils.gemini import (
     get_answer,
     generate_quiz,
@@ -629,8 +629,8 @@ def tutor_ask():
 
         # Create question embedding
 
-        question_embedding = create_embeddings(
-            [question]
+        question_embedding = create_query_embedding(
+            question
         )
 
         question_embedding = question_embedding.astype(

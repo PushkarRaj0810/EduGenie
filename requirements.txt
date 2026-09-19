@@ -4,7 +4,6 @@ psycopg[binary]
 python-dotenv
 bcrypt
 google-genai
-sentence-transformers
 faiss-cpu
 langchain-text-splitters
 pymupdf
