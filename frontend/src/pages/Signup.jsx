@@ -8,10 +8,12 @@ import {
   X,
 } from "lucide-react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function Signup() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +29,7 @@ export default function Signup() {
     uppercase: /[A-Z]/.test(password),
     lowercase: /[a-z]/.test(password),
     number: /[0-9]/.test(password),
-    special: /[!@#$%^&*(),.?":{}|<>_\-+=/\\[\];'`~]/.test(password),
+    special: /[!@#$%^&*(),.?":{}|<>\_\-+=/\\[\];'`~]/.test(password),
   };
 
   const isStrongPassword =
@@ -114,11 +116,11 @@ export default function Signup() {
       const data = await response.json();
 
       if (data.success) {
-        setMessage("Account created successfully!");
+        // Save logged-in user
+        localStorage.setItem("user", JSON.stringify(data.user));
 
-        setName("");
-        setEmail("");
-        setPassword("");
+        // Move to Dashboard
+        navigate("/dashboard");
       } else {
         // Show the actual backend reason
         setMessage(
@@ -127,6 +129,7 @@ export default function Signup() {
       }
     } catch (error) {
       console.error(error);
+
       setMessage(
         "Unable to connect to backend. Please make sure the server is running."
       );
@@ -190,6 +193,7 @@ export default function Signup() {
           />
 
           {/* Password requirements */}
+
           {password.length > 0 && (
             <div className="mt-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3">
               <p className="mb-2 text-[11px] font-medium text-slate-500">
@@ -251,6 +255,7 @@ export default function Signup() {
 
       <p className="mt-6 text-center text-xs text-slate-600">
         Already have an account?{" "}
+
         <Link
           to="/login"
           className="font-semibold text-violet-400 hover:text-violet-300"
@@ -316,6 +321,7 @@ function AuthLayout({ children }) {
       <div className="absolute inset-0 grid-background opacity-40" />
 
       <div className="glow-orb glow-orb-one" />
+
       <div className="glow-orb glow-orb-two" />
 
       <div className="relative w-full max-w-md">
@@ -329,4 +335,4 @@ function AuthLayout({ children }) {
       </div>
     </main>
   );
-} 
+}
