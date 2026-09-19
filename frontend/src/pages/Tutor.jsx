@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import GlassCard from "../components/GlassCard";
 import { getPreferences } from "../utils/preferences";
 
-const API_URL = "http://127.0.0.1:5000/api";
+const API_URL = "https://edugenie-73vn.onrender.com/api";
 
 export default function Tutor() {
   const [documents, setDocuments] = useState([]);

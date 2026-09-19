@@ -97,7 +97,7 @@ export default function Signup() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/register",
+        "https://edugenie-73vn.onrender.com/api/register",
         {
           method: "POST",
           headers: {

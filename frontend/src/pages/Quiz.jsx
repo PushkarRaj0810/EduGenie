@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 import GlassCard from "../components/GlassCard";
 
-const API_URL = "http://127.0.0.1:5000/api";
+const API_URL = "https://edugenie-73vn.onrender.com/api";
 
 export default function Quiz() {
   const navigate = useNavigate();

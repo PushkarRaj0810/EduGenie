@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import GlassCard from "../components/GlassCard";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://edugenie-73vn.onrender.com";
 
 export default function Documents() {
   const fileInputRef = useRef(null);

@@ -12,7 +12,7 @@ import {
   saveNotifications,
 } from "../utils/preferences";
 
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://edugenie-73vn.onrender.com";
 
 function getUser() {
   try { return JSON.parse(localStorage.getItem("user") || "null"); }
