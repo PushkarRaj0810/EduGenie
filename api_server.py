@@ -131,11 +131,25 @@ def register():
 
         password_hash = hash_password(password)
 
-        user = register_user(
+        user_id = register_user(
             name,
             email,
             password_hash
         )
+
+        if user_id is None:
+            return jsonify({
+                "success": False,
+                "message": "Email already registered."
+            }), 409
+
+        user = get_user_by_id(user_id)
+
+        if user is None:
+            return jsonify({
+                "success": False,
+                "message": "User was created but could not be loaded."
+            }), 500
 
         return jsonify({
             "success": True,
